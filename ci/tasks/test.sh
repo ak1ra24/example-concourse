@@ -13,4 +13,4 @@ pwd
 cd
 ls -al
 pwd
-echo "pr-test OK" > output.txt
+echo "pr-test OK" >> pr/output.txt
