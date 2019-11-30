@@ -18,7 +18,7 @@ echo "<summary>TEST RESULT</summary>" >> $BUILD_PATH/output-file/comment.txt
 echo "" >> $BUILD_PATH/output-file/comment.txt
 echo "\`\`\`" >> $BUILD_PATH/output-file/comment.txt
 go test ./... >> $BUILD_PATH/output-file/comment.txt
-echo "\`\`\`\n" >> $BUILD_PATH/output-file/comment.txt
+echo "\`\`\`" >> $BUILD_PATH/output-file/comment.txt
 echo "" >> $BUILD_PATH/output-file/comment.txt
 echo "</details>" >> $BUILD_PATH/output-file/comment.txt
 ls -al $BUILD_PATH/output-file
