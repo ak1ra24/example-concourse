@@ -10,4 +10,7 @@ go test ./...
 echo "=====TEST END====="
 ls -al
 pwd
-echo "pr-test OK" > /tmp/build/put/pr/output.txt
+cd
+ls -al
+pwd
+echo "pr-test OK" > output.txt
