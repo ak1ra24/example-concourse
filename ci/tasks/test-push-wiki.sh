@@ -1,19 +1,19 @@
 #!/usr/bin/env sh
-git clone git@github.com:ak1ra24/example-concourse.git resource-example-wiki
+git clone resource-example-wiki updated-resource-example-wiki
 git config --global user.email "marug4580@gmail.com"
 git config --global user.name "ak1ra24"
 
-cd resource-example-wiki
+cd updated-resource-example-wiki
 
 FILE="Wiki.md"
  
 if [ -e $FILE ]; then
-    echo "| date | time |\n" >> Home.md
-    echo "|---|---|\n" >> Home.md
+    echo "| date | time |\n" >> Wiki.md
+    echo "|---|---|\n" >> Wiki.md
 fi
 export DATE=$(date '+%Y/%m/%d')
 export TIME=$(date '+%R')
-echo "|$DATE|$TIME|" >> Home.md
+echo "|$DATE|$TIME|" >> Wiki.md
 
 git add -A
 git commit -m "Update wiki $DATE $TIME"

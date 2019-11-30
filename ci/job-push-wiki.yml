@@ -11,7 +11,7 @@ inputs:
 - name: resource-example
 
 outputs:
-  - name: resource-example-wiki
+  - name: updated-resource-example-wiki
 
 run:
   path: resource-example/ci/tasks/test-push-wiki.sh
