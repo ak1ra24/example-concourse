@@ -24,6 +24,16 @@ func TestExampleSuccess2(t *testing.T) {
 	}
 }
 
+func TestExampleSuccess3(t *testing.T) {
+	result, err := example("hogehogehoge")
+	if err != nil {
+		t.Fatalf("failed test %#v", err)
+	}
+	if result != 1 {
+		t.Fatal("failed test")
+	}
+}
+
 func TestExampleFailed(t *testing.T) {
 	result, err := example("fuga")
 	if err == nil {

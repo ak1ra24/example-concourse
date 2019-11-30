@@ -9,9 +9,7 @@ image_resource:
 
 inputs:
 - name: pr
-
-outputs:
 - name: output-file
 
 run:
-  path: pr/ci/tasks/test.sh
+  path: pr/ci/tasks/test-output.sh

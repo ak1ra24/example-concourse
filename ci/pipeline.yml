@@ -41,6 +41,20 @@ jobs:
       params:
         path: pr
         status: failure
+  - task: pr-comment
+    file: pr/ci/job-pr-comment.yml
+    on_success:
+      put: pr
+      params:
+        path: pr
+        status: success
+        comment_file: "output-file/comment.txt"
+    on_failure:
+      put: pr
+      params:
+        path: pr
+        status: failure
+        comment: "Failed"
 - name: job-push-master
   plan:
   - get: resource-example
