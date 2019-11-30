@@ -11,6 +11,6 @@ cd ${GOPATH}/src/github.com/ak1ra24/example-concourse
 go test ./...
 echo "=====TEST END====="
 cd $BUILD_PATH
-echo "pr-test OK" > pr/output.txt
+echo "pr-test OK" >> pr/output.txt
 ls -al $BUILD_PATH
 ls -al $BUILD_PATH/pr
