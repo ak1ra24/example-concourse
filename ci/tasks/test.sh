@@ -13,11 +13,10 @@ echo "=====TEST END====="
 
 mkdir $BUILD_PATH/output-file
 echo "TEST RESULT"
-echo "<details>" >> $BUILD_PATH/output-file/comment.txt
-echo "<summary>TEST RESULT</summary>" >> $BUILD_PATH/output-file/comment.txt
-echo "```" >> $BUILD_PATH/output-file/comment.txt
+echo "<details>\n<summary>TEST RESULT</summary>" >> $BUILD_PATH/output-file/comment.txt
+echo "\`\`\`" >> $BUILD_PATH/output-file/comment.txt
 go test ./... >> $BUILD_PATH/output-file/comment.txt
-echo "```" >> $BUILD_PATH/output-file/comment.txt
+echo "\`\`\`" >> $BUILD_PATH/output-file/comment.txt
 echo "</details>" >> $BUILD_PATH/output-file/comment.txt
 ls -al $BUILD_PATH/output-file
 cat $BUILD_PATH/output-file/comment.txt
