@@ -13,6 +13,6 @@ pwd
 cd
 ls -al
 pwd
-ls -al /tmp
+ls -al /tmp/build/
 pwd
-echo "pr-test OK" > output.txt
+echo "pr-test OK" > /tmp/build/put/pr/output.txt
