@@ -6,11 +6,13 @@ git config --global user.name "ak1ra24"
 cd updated-resource-example-wiki
 
 FILE="Wiki.md"
- 
-if [ -e $FILE ]; then
-    echo "| date | time |\n" >> Wiki.md
-    echo "|---|---|\n" >> Wiki.md
-fi
+rm -rf $FILE
+echo "| date | time |\n" >> Wiki.md
+echo "|---|---|\n" >> Wiki.md
+# if [ -e $FILE ]; then
+#     echo "| date | time |\n" >> Wiki.md
+#     echo "|---|---|\n" >> Wiki.md
+# fi
 export DATE=$(date '+%Y/%m/%d')
 export TIME=$(date '+%R')
 echo "|$DATE|$TIME|" >> Wiki.md
