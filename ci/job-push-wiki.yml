@@ -9,10 +9,9 @@ image_resource:
 
 inputs:
 - name: resource-example
-- name: resource-example-wiki
 
 outputs:
-  - name: updated-result
+  - name: resource-example-wiki
 
 run:
   path: resource-example/ci/tasks/test-push-wiki.sh
