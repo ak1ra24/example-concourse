@@ -9,6 +9,7 @@ image_resource:
 
 inputs:
 - name: resource-example
+- name: resource-example-wiki
 
 outputs:
   - name: updated-resource-example-wiki

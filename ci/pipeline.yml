@@ -12,6 +12,13 @@ resources:
       uri: https://github.com/ak1ra24/example-concourse.git
       branch: master
       private_key: ((GITHUB_PRIVATE_KEY))
+  - name: resource-example-wiki
+    type: git
+    source:
+      uri: git@github.com:ak1ra24/example-concourse.wiki.git
+      branch: master
+      private_key: ((GITHUB_PRIVATE_KEY))
+
   - name: pr
     type: pull-request
     # check_every: 24h
@@ -64,11 +71,12 @@ jobs:
 
 - name: job-wiki
   plan:
+  - get: resource-example-wiki
   - get: resource-example
     trigger: true
     passed: [ job-push-master ]
   - task: push-wiki
     file: resource-example/ci/job-push-wiki.yml
-  - put: result
+  - put: resource-example-wiki
     params:
-      repository: resource-example-wiki
+      repository: updated-resource-example-wiki
