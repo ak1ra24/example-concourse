@@ -41,6 +41,10 @@ jobs:
       params:
         path: pr
         status: failure
+  - put: pr
+    params:
+      path: pr
+      comment_file: pr/output.txt
 - name: job-push-master
   plan:
   - get: resource-example

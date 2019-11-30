@@ -8,3 +8,4 @@ cd ${GOPATH}/src/github.com/ak1ra24/example-concourse
 echo "=====TEST START====="
 go test ./...
 echo "=====TEST END====="
+echo "pr-test OK" > output.txt
