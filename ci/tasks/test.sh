@@ -10,6 +10,6 @@ cd ${GOPATH}/src/github.com/ak1ra24/example-concourse
 
 go test ./...
 echo "=====TEST END====="
-echo "pr-test OK" >> $BUILD_PATH/github-comment/comment.txt
+echo "pr-test OK" >> $BUILD_PATH/pr/comment.txt
 ls -al $BUILD_PATH/
-cat $BUILD_PATH/github-comment/comment.txt
+cat $BUILD_PATH/pr/comment.txt
