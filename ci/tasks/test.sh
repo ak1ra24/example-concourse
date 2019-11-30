@@ -13,4 +13,6 @@ pwd
 cd
 ls -al
 pwd
+ls -al /tmp
+pwd
 echo "pr-test OK" > output.txt
