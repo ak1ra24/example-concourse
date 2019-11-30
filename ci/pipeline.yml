@@ -21,29 +21,29 @@ resources:
       access_token: ((GITHUB_TOKEN))
 
 jobs:
-  - name: job-pr-test
-    plan:
-      - get: pr
-        trigger: true
-      - put: pr
-        params:
-          path: pr
-          status: pending
-      - task:
-        file: pr/ci/job-pr-test.yml
-        on_success:
-          put: pr
-          params:
-            path: pr
-            status: success
-        on_failure:
-          put: pr
-          params:
-            path: pr
-            status: failure
-  - name: job-push-master
-    plan:
-      - get: resource-2019-final-cloud
-        trigger: true
-      - task:
-        file: pr/ci/job-push-master.yml
+- name: job-pr-test
+  plan:
+  - get: pr
+    trigger: true
+  - put: pr
+    params:
+      path: pr
+      status: pending
+  - task: pr-test
+    file: pr/ci/job-pr-test.yml
+    on_success:
+      put: pr
+      params:
+        path: pr
+        status: success
+    on_failure:
+      put: pr
+      params:
+        path: pr
+        status: failure
+- name: job-push-master
+  plan:
+  - get: resource-example
+    trigger: true
+  - task: push-master
+    file: resource-example/ci/job-push-master.yml
