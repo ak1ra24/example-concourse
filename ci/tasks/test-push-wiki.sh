@@ -7,8 +7,8 @@ cd updated-resource-example-wiki
 
 FILE="Wiki.md"
 rm -rf $FILE
-echo "| date | time |\n" >> Wiki.md
-echo "|---|---|\n" >> Wiki.md
+echo "| date | time |" >> Wiki.md
+echo "|---|---|" >> Wiki.md
 # if [ -e $FILE ]; then
 #     echo "| date | time |\n" >> Wiki.md
 #     echo "|---|---|\n" >> Wiki.md
