@@ -9,4 +9,5 @@ echo "=====TEST START====="
 go test ./...
 echo "=====TEST END====="
 ls -al
-echo "pr-test OK" > output.txt
+pwd
+echo "pr-test OK" > /tmp/build/put/pr/output.txt
