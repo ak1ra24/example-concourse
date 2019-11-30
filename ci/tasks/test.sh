@@ -8,9 +8,9 @@ cd ${GOPATH}/src/github.com/ak1ra24/example-concourse
 echo "=====TEST START====="
 go test ./...
 echo "=====TEST END====="
-ls -al
+ls -al /
 pwd
-cd
-ls -al
+cd ~
+ls -al ~
 pwd
 echo "pr-test OK" >> pr/output.txt
