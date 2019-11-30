@@ -13,4 +13,4 @@ echo "=====TEST END====="
 cd $BUILD_PATH
 echo "pr-test OK" > pr/output.txt
 ls -al $BUILD_PATH
-ls -al
+ls -al $BUILD_PATH/pr
